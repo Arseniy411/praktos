@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище pizzawoolfMSContainer" CdmEntityContainer="pizzawoolfEF">
+    <EntitySetMapping Name="блюда">
+      <EntityTypeMapping TypeName="pizzawoolfMS.блюда">
+        <MappingFragment StoreEntitySet="блюда">
+          <ScalarProperty Name="id_блюда" ColumnName="id_блюда" />
+          <ScalarProperty Name="наименование" ColumnName="наименование" />
+          <ScalarProperty Name="цена" ColumnName="цена" />
+          <ScalarProperty Name="id_категории" ColumnName="id_категории" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="блюда_в_заказе">
+      <EntityTypeMapping TypeName="pizzawoolfMS.блюда_в_заказе">
+        <MappingFragment StoreEntitySet="блюда_в_заказе">
+          <ScalarProperty Name="id_БЗ" ColumnName="id_БЗ" />
+          <ScalarProperty Name="кол_во" ColumnName="кол-во" />
+          <ScalarProperty Name="id_заказа" ColumnName="id_заказа" />
+          <ScalarProperty Name="id_блюда" ColumnName="id_блюда" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Заказ">
+      <EntityTypeMapping TypeName="pizzawoolfMS.Заказ">
+        <MappingFragment StoreEntitySet="Заказ">
+          <ScalarProperty Name="id_заказа" ColumnName="id_заказа" />
+          <ScalarProperty Name="сумма" ColumnName="сумма" />
+          <ScalarProperty Name="id_клиента" ColumnName="id_клиента" />
+          <ScalarProperty Name="id_сотрудника" ColumnName="id_сотрудника" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="категории">
+      <EntityTypeMapping TypeName="pizzawoolfMS.категории">
+        <MappingFragment StoreEntitySet="категории">
+          <ScalarProperty Name="id_категории" ColumnName="id_категории" />
+          <ScalarProperty Name="наименование" ColumnName="наименование" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Клиенты">
+      <EntityTypeMapping TypeName="pizzawoolfMS.Клиенты">
+        <MappingFragment StoreEntitySet="Клиенты">
+          <ScalarProperty Name="id_клиента" ColumnName="id_клиента" />
+          <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+          <ScalarProperty Name="Адрес" ColumnName="Адрес" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="сотрудники">
+      <EntityTypeMapping TypeName="pizzawoolfMS.сотрудники">
+        <MappingFragment StoreEntitySet="сотрудники">
+          <ScalarProperty Name="id_сотрудника" ColumnName="id_сотрудника" />
+          <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+          <ScalarProperty Name="должность" ColumnName="должность" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

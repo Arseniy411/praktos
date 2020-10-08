@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pizzawoolfMS" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="блюда">
+    <Key>
+      <PropertyRef Name="id_блюда" />
+    </Key>
+    <Property Name="id_блюда" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="наименование" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="цена" Type="Int64" Nullable="false" />
+    <Property Name="id_категории" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="блюда_в_заказе" Relationship="Self.FK_блюда_в_заказе_блюда" FromRole="блюда" ToRole="блюда_в_заказе" />
+    <NavigationProperty Name="категории" Relationship="Self.FK_блюда_категории" FromRole="блюда" ToRole="категории" />
+  </EntityType>
+  <EntityType Name="блюда_в_заказе">
+    <Key>
+      <PropertyRef Name="id_БЗ" />
+    </Key>
+    <Property Name="id_БЗ" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="кол_во" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_заказа" Type="Int64" Nullable="false" />
+    <Property Name="id_блюда" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="блюда" Relationship="Self.FK_блюда_в_заказе_блюда" FromRole="блюда_в_заказе" ToRole="блюда" />
+    <NavigationProperty Name="Заказ" Relationship="Self.FK_блюда_в_заказе_Заказ" FromRole="блюда_в_заказе" ToRole="Заказ" />
+  </EntityType>
+  <EntityType Name="Заказ">
+    <Key>
+      <PropertyRef Name="id_заказа" />
+    </Key>
+    <Property Name="id_заказа" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="сумма" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_клиента" Type="Int64" Nullable="false" />
+    <Property Name="id_сотрудника" Type="Int64" />
+    <NavigationProperty Name="блюда_в_заказе" Relationship="Self.FK_блюда_в_заказе_Заказ" FromRole="Заказ" ToRole="блюда_в_заказе" />
+    <NavigationProperty Name="Клиенты" Relationship="Self.FK_Заказ_Клиенты" FromRole="Заказ" ToRole="Клиенты" />
+    <NavigationProperty Name="сотрудники" Relationship="Self.FK_Заказ_сотрудники" FromRole="Заказ" ToRole="сотрудники" />
+  </EntityType>
+  <EntityType Name="категории">
+    <Key>
+      <PropertyRef Name="id_категории" />
+    </Key>
+    <Property Name="id_категории" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="наименование" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="блюда" Relationship="Self.FK_блюда_категории" FromRole="категории" ToRole="блюда" />
+  </EntityType>
+  <EntityType Name="Клиенты">
+    <Key>
+      <PropertyRef Name="id_клиента" />
+    </Key>
+    <Property Name="id_клиента" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ФИО" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Адрес" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Телефон" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Заказ" Relationship="Self.FK_Заказ_Клиенты" FromRole="Клиенты" ToRole="Заказ" />
+  </EntityType>
+  <EntityType Name="сотрудники">
+    <Key>
+      <PropertyRef Name="id_сотрудника" />
+    </Key>
+    <Property Name="id_сотрудника" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ФИО" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="должность" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Заказ" Relationship="Self.FK_Заказ_сотрудники" FromRole="сотрудники" ToRole="Заказ" />
+  </EntityType>
+  <Association Name="FK_блюда_в_заказе_блюда">
+    <End Role="блюда" Type="Self.блюда" Multiplicity="1" />
+    <End Role="блюда_в_заказе" Type="Self.блюда_в_заказе" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="блюда">
+        <PropertyRef Name="id_блюда" />
+      </Principal>
+      <Dependent Role="блюда_в_заказе">
+        <PropertyRef Name="id_блюда" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_блюда_категории">
+    <End Role="категории" Type="Self.категории" Multiplicity="1" />
+    <End Role="блюда" Type="Self.блюда" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="категории">
+        <PropertyRef Name="id_категории" />
+      </Principal>
+      <Dependent Role="блюда">
+        <PropertyRef Name="id_категории" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_блюда_в_заказе_Заказ">
+    <End Role="Заказ" Type="Self.Заказ" Multiplicity="1" />
+    <End Role="блюда_в_заказе" Type="Self.блюда_в_заказе" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Заказ">
+        <PropertyRef Name="id_заказа" />
+      </Principal>
+      <Dependent Role="блюда_в_заказе">
+        <PropertyRef Name="id_заказа" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заказ_Клиенты">
+    <End Role="Клиенты" Type="Self.Клиенты" Multiplicity="1" />
+    <End Role="Заказ" Type="Self.Заказ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Клиенты">
+        <PropertyRef Name="id_клиента" />
+      </Principal>
+      <Dependent Role="Заказ">
+        <PropertyRef Name="id_клиента" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Заказ_сотрудники">
+    <End Role="сотрудники" Type="Self.сотрудники" Multiplicity="0..1" />
+    <End Role="Заказ" Type="Self.Заказ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="сотрудники">
+        <PropertyRef Name="id_сотрудника" />
+      </Principal>
+      <Dependent Role="Заказ">
+        <PropertyRef Name="id_сотрудника" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="pizzawoolfEF" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="блюда" EntityType="Self.блюда" />
+    <EntitySet Name="блюда_в_заказе" EntityType="Self.блюда_в_заказе" />
+    <EntitySet Name="Заказ" EntityType="Self.Заказ" />
+    <EntitySet Name="категории" EntityType="Self.категории" />
+    <EntitySet Name="Клиенты" EntityType="Self.Клиенты" />
+    <EntitySet Name="сотрудники" EntityType="Self.сотрудники" />
+    <AssociationSet Name="FK_блюда_в_заказе_блюда" Association="Self.FK_блюда_в_заказе_блюда">
+      <End Role="блюда" EntitySet="блюда" />
+      <End Role="блюда_в_заказе" EntitySet="блюда_в_заказе" />
+    </AssociationSet>
+    <AssociationSet Name="FK_блюда_категории" Association="Self.FK_блюда_категории">
+      <End Role="категории" EntitySet="категории" />
+      <End Role="блюда" EntitySet="блюда" />
+    </AssociationSet>
+    <AssociationSet Name="FK_блюда_в_заказе_Заказ" Association="Self.FK_блюда_в_заказе_Заказ">
+      <End Role="Заказ" EntitySet="Заказ" />
+      <End Role="блюда_в_заказе" EntitySet="блюда_в_заказе" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заказ_Клиенты" Association="Self.FK_Заказ_Клиенты">
+      <End Role="Клиенты" EntitySet="Клиенты" />
+      <End Role="Заказ" EntitySet="Заказ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Заказ_сотрудники" Association="Self.FK_Заказ_сотрудники">
+      <End Role="сотрудники" EntitySet="сотрудники" />
+      <End Role="Заказ" EntitySet="Заказ" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

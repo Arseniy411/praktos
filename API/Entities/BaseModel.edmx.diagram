@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a62a010e95349f7abf1abf4f42e12ad" Name="Diagram1">
+        <EntityTypeShape EntityType="pizzawoolfModel.блюда" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="pizzawoolfModel.блюда_в_заказе" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="pizzawoolfModel.Заказ" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="pizzawoolfModel.категории" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pizzawoolfModel.Клиенты" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="pizzawoolfModel.сотрудники" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="pizzawoolfModel.FK_блюда_в_заказе_блюда" ManuallyRouted="false" />
+        <AssociationConnector Association="pizzawoolfModel.FK_блюда_категории" ManuallyRouted="false" />
+        <AssociationConnector Association="pizzawoolfModel.FK_блюда_в_заказе_Заказ" ManuallyRouted="false" />
+        <AssociationConnector Association="pizzawoolfModel.FK_Заказ_Клиенты" ManuallyRouted="false" />
+        <AssociationConnector Association="pizzawoolfModel.FK_Заказ_сотрудники" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

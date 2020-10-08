@@ -1,0 +1,30 @@
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\bin\Debug\AdministratorPizzaWolf.exe.config
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\bin\Debug\AdministratorPizzaWolf.exe
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\bin\Debug\AdministratorPizzaWolf.pdb
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.csprojAssemblyReference.cache
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Dishes.resources
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.MainForm.resources
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Orders.resources
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Properties.Resources.resources
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Staff.resources
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.csproj.GenerateResource.cache
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.csproj.CoreCompileInputs.cache
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.exe
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.pdb
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Categories.resources
+F:\Users\pr117pbulychev\Desktop\приложуха for администратора\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Clients.resources
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\bin\Debug\AdministratorPizzaWolf.exe.config
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\bin\Debug\AdministratorPizzaWolf.exe
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\bin\Debug\AdministratorPizzaWolf.pdb
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.csprojAssemblyReference.cache
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Categories.resources
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Clients.resources
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Dishes.resources
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.MainForm.resources
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Orders.resources
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Properties.Resources.resources
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.Staff.resources
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.csproj.GenerateResource.cache
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.csproj.CoreCompileInputs.cache
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.exe
+G:\Проект\AdministratorPizzaWolf\AdministratorPizzaWolf\obj\Debug\AdministratorPizzaWolf.pdb
